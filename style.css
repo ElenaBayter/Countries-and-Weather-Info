@@ -1,0 +1,46 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 95vh;
+    font-family: 'Prompt';
+    background-image: url(./img/spring.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}
+h1{
+    padding: 25px 250px 0 250px;
+    text-align: center;
+    color: rgb(123, 73, 73);
+    font-size: 30px;
+    
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+}
+button{
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: medium;
+    background-color: rgb(191, 113, 113);
+}
+input{
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: 2px solid rgb(196, 116, 116);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+h2{
+    text-align: center;
+    width: 60%;
+    color: rgb(142, 88, 88);
+}
