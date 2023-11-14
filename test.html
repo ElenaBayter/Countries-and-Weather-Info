@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+    
+    
+        .swiper {
+          width: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+    
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 200px;
+          height: 200px;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+        }
+        .swiper_img{
+            width: 100%;
+        }
+        .main_section{
+            height: 96vh;
+            font-family: 'Prompt';
+            background-image: url(./img/spring.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+      </style>
+</head>
+<body>
+    <section class="main_section">
+        <h1>Country and city-weather info</h1>
+    <div class="main">
+        <div class="container">
+            <h2>Country general info</h2>
+            <div>
+                <input id="input" type="text" placeholder="Country">
+                <button class="btn">Get info</button>
+            </div>
+            
+            <div class="output"></div>
+        </div>
+        <div class="container">
+            <h2>Weather</h2>
+            <div>
+                <input type="text" id="city_input" placeholder="Input city">
+                <button class="get_weather_btn">Get Weather</button>
+            </div>
+            <h2 class="weather_output"></h2>  
+        </div>
+    </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="swiper_img" src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper_img" src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper_img" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper_img" src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper_img" src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+</body>
+</html>

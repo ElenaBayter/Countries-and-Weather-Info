@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
           .join(", ");
         const flag = country.flags.png;
         output.innerHTML = `
-            <h2>${country.name.common}</h2>
-            <p><strong>Capital:</strong> ${capital}</p>
-            <p><strong>Languages:</strong> ${langs}</p>
-            <p><strong>Currencies:</strong> ${currencies}</p>
-            <img src="${flag}" alt="Flag" style="width: 150px;">
-          `;
+          <h3 class="output_item">${country.name.common}</h3>
+          <p class="output_item"><strong>Capital:</strong> ${capital}</p>
+          <p class="output_item"><strong>Languages:</strong> ${langs}</p>
+          <p class="output_item"><strong>Currencies:</strong> ${currencies}</p>
+          <img class="output_item" src="${flag}" alt="Flag" style="width: 150px;">
+        `;
         output.style.lineHeight = "15px";
       } else {
         output.textContent = "Country not found.";
@@ -73,22 +73,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const description = data.weather[0].description;
         const cityName = data.name;
         const country = data.sys.country;
+        const mainSec = document.querySelector(".main_section");
+        const h2 = document.querySelectorAll(".out");
         weatherDiv.textContent = `Temperature in ${cityName}, ${country}: ${temperature}°C, ${description}`;
         if (temperature < 6) {
-          document.body.style.backgroundImage = "url(./img/winter.jpg)";
+          mainSec.style.backgroundImage = "url(../img/winter.jpg)";
+          h2.forEach((element) => {
+            element.style.color = "white";
+          });
         }
         if (temperature >= 6 && temperature < 13) {
-          document.body.style.backgroundImage = "url(./img/autumn-light.jpg)";
-          const h2 = document.querySelectorAll("h2");
+          mainSec.style.backgroundImage = "url(../img/autumn-light.jpg)";
           h2.forEach((element) => {
             element.style.color = "black";
           });
         }
         if (temperature >= 13 && temperature < 26) {
-          document.body.style.backgroundImage = "url(./img/spring.jpg)";
+          mainSec.style.backgroundImage = "url(../img/spring.jpg)";
         }
         if (temperature >= 26) {
-          document.body.style.backgroundImage = "url(./img/summer.jpg)";
+          mainSec.style.backgroundImage = "url(../img/summer.jpg)";
         }
       } else {
         weatherDiv.textContent = `The city has no found`;

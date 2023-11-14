@@ -7,30 +7,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Country and city-weather info</h1>
-    <div class="main">
-        <div class="container">
-            <h2>Country general info</h2>
-            <div>
-                <input id="input" type="text" placeholder="Country">
-                <button class="btn">Get info</button>
+    <section class="main_section">
+        <h1>Country and city-weather info</h1>
+        <div class="main">
+            <div class="container">
+                <h2>Country general info</h2>
+                <div>
+                    <input id="input" type="text" placeholder="Country">
+                    <button class="btn">Get info</button>
+                </div>
+                <div class="output out"></div>
             </div>
-            
-            <div class="output"></div>
-        </div>
-        <div class="container">
-            <h2>Weather</h2>
-            <div>
-                <input type="text" id="city_input" placeholder="Input city">
-                <button class="get_weather_btn">Get Weather</button>
+            <div class="container">
+                <h2>Weather</h2>
+                <div>
+                    <input type="text" id="city_input" placeholder="Input city">
+                    <button class="get_weather_btn">Get Weather</button>
+                </div>
+                <h2 class="weather_output out"></h2>  
             </div>
-            <h2 class="weather_output"></h2>  
         </div>
-    </div>
+    </section>
+    
     
 </body>
 </html>
